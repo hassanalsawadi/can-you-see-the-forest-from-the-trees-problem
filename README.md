@@ -23,3 +23,26 @@ o o   o o   o o   o o
 o   o   o   o   o   o
   o o o o   o o o o 
 ```
+
+## Solution
+### 1. Using Analytic Geometry and Numpy:
+```python
+import numpy as np
+n = 101
+v = np.concatenate([np.linspace(-50, 0, 51), np.linspace(1, 50, 50)])
+x, y= np.meshgrid(v, v)
+num_visible_trees = np.unique(np.arctan2(y, x)).shape[0]
+print("You can see %d trees while standing at the origin." % num_visible_trees)
+```
+
+### 2. Using Number Theory and pure Python:
+```python
+import math 
+n = 101
+num_visible_trees = -4
+for i in range(0, (n // 2 + 1)):
+  for j in range(0, (n // 2 + 1)):
+    if (math.gcd(i, j) == 1):
+      num_visible_trees += 4
+print("You can see %d trees while standing at the origin." % num_visible_trees)
+```
