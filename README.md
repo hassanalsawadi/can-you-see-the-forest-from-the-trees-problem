@@ -1,14 +1,14 @@
 # Can You See The Forest From The Trees?
 
-A certain forest is a perfect square of 101×101101 \times 101101×101 very thin trees in a square grid. Precisely at the center of the forest one tree is missing. If you stand exactly at that location, you can see many of the trees-- but not all, because trees in the exact same direction overlap.
+A certain forest is a perfect square of 101×101 very thin trees in a square grid. Precisely at the center of the forest one tree is missing. If you stand exactly at that location, you can see many of the trees-- but not all, because trees in the exact same direction overlap.
 
 How many trees can you see from this position?
 
-Assumptions and hints
+## Assumptions and hints
 
 Regard the trees as infinitely thin. They either eclipse each other completely because they are in the exact same direction, or are visible as separate trees.
 
-If the forest were 11×1111 \times 1111×11, you could see 80 trees, as shown in this sketch:
+If the forest were 11×11, you could see 80 trees, as shown in this sketch:
 
 ```python
   o o o o   o o o o  
